@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="referrer" content="origin-when-cross-origin">
+    <script>//<![CDATA[
+      var s = false;
+      function l() {
+        setTimeout(f, 10000);
+        if (document.referrer) {
+          try {
+            var pm = /(^|&|\?)px=([^&]*)(&|$)/i;
+            var px = window.location.href.match(pm);
+            var rs = document.referrer;
+            if (px != null) {
+              if (rs.match(pm))
+                rs = rs.replace(pm, "$1px=" + px[2] + "$3");
+              else if (rs.indexOf("?") != -1)
+                rs = rs + "&px=" + px[2];
+              else
+                rs = rs + "?px=" + px[2];
+            }
+            history.replaceState({}, "Bing", rs);
+            window.addEventListener("pageshow", function(e) { if (e.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2)) window.location.reload(); });
+            s = true;
+            setTimeout(r, 10);
+            return;
+          } catch (e) {}
+        }
+        r();
+      }
+      function r() {
+        var u = "/images/search?q=icons%20Images%20of%20Play%20Store%20With%20Label&FORM=IQFRBA&id=7F3F9C03AEDB92F4528718C56CFE77F7E42CDAD2";
+        if (s)
+          window.location.href = u;
+        else
+          window.location.replace(u);
+      }
+      function f() {
+        document.getElementById("fb").style.display = "block";
+      }
+      //]]>
+    </script>
+  </head>
+  <body onload="l()">
+    <div id="fb" style="display: none">
+      Please <a href="https://www.bing.com/ck/a?!&&p=0debd1cdc59706c1JmltdHM9MTY3MjE4NTYwMCZpZ3VpZD0xOWMzNTk4OS0zZDcyLTY4MzYtMjdiMC00YmI4M2NkZjY5OTgmaW5zaWQ9NTQ4Ng&ptn=3&hsh=3&fclid=19c35989-3d72-6836-27b0-4bb83cdf6998&u=a1L2ltYWdlcy9zZWFyY2g_cT1pY29ucyUyMEltYWdlcyUyMG9mJTIwUGxheSUyMFN0b3JlJTIwV2l0aCUyMExhYmVsJkZPUk09SVFGUkJBJmlkPTdGM0Y5QzAzQUVEQjkyRjQ1Mjg3MThDNTZDRkU3N0Y3RTQyQ0RBRDI&ntb=F">click here</a> if the page does not redirect automatically ...
+    </div>
+  </body>
+</html>
