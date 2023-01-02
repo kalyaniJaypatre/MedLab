@@ -1,0 +1,105 @@
+{
+    "pincodeDetails":[
+        {
+            "isAvailable":true,
+            "pincode":413519,
+            "packageDetails":[
+                {
+                    "packageName":"Aurvedic  family Pack",
+                    "packageId":"42566666a0243f0e1100",
+                    "provider":[
+                        {
+                            "name":"PaharmEasy1",
+                            "dcid":"54433aaaa12",
+                            "isStorePickUp":false,
+                            "courierInfo":{
+                                "discount":"30",
+                                "deiveryTime":"3",
+                                "pincode":"413519"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "pincodeCity":"Aurangabad",
+            "statusCode":"NonAuthoritativeInformation"
+        },
+
+        {
+            "isAvailable":true,
+            "pincode":413518,
+            "packageDetails":[
+                {
+                    "packageName":"Medicine  family Pack",
+                    "packageId":"42566666a0243f0e1100",
+                    "provider":[
+                        {
+                            "name":"PaharmEasy1",
+                            "dcid":"54433aaaa1",
+                            "isStorePickUp":false,
+                            "courierInfo":{
+                                "discount":"20",
+                                "deiveryTime":"5",
+                                "pincode":"413518"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "pincodeCity":"Latur",
+            "statusCode":"NonAuthoritativeInformation"
+        },
+
+        {
+            "isAvailable":true,
+            "pincode":413536,
+            "packageDetails":[
+                {
+                    "packageName":"Golden family Pack",
+                    "packageId":"42566666a0243f0e11005",
+                    "provider":[
+                        {
+                            "name":"PaharmEasy1",
+                            "dcid":"54433aaaa12",
+                            "isStorePickUp":false,
+                            "courierInfo":{
+                                "discount":"10",
+                                "deiveryTime":"3",
+                                "pincode":"413536"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "pincodeCity":"Pune",
+            "statusCode":"NonAuthoritativeInformation"
+        },
+
+        
+        {
+            "isAvailable":true,
+            "pincode":423601,
+            "packageDetails":[
+                {
+                    "packageName":"Silver family Pack",
+                    "packageId":"42566666a0243f0e11005",
+                    "provider":[
+                        {
+                            "name":"PaharmEasy1",
+                            "dcid":"54433aaaa124",
+                            "isStorePickUp":false,
+                            "courierInfo":{
+                                "discount":"50",
+                                "deiveryTime":"3",
+                                "pincode":"423601"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "pincodeCity":"Nashik",
+            "statusCode":"NonAuthoritativeInformation"
+        }
+
+    ]}
+    
