@@ -12,7 +12,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animatio
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { TopDealComponent } from './components/top-deal/top-deal.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule} from '@angular/common/http'
+import { HttpClientModule} from '@angular/common/http';
+import { ViewProductDetailsComponent } from './components/view-product-details/view-product-details.component';
+import { LoginModule } from './login/login.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { HttpClientModule} from '@angular/common/http'
     PageNotFoundComponent,
     MedicineHomeComponent,
     TopDealComponent,
+    ViewProductDetailsComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,8 @@ import { HttpClientModule} from '@angular/common/http'
     BrowserAnimationsModule,
     CarouselModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    LoginModule
 
 
 
