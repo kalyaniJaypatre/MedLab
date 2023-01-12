@@ -11,7 +11,7 @@ import { MedicineHomeComponent } from './components/medicine-home/medicine-home.
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { TopDealComponent } from './components/top-deal/top-deal.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { ViewProductDetailsComponent } from './components/view-product-details/view-product-details.component';
 import { LoginModule } from './login/login.module';
@@ -36,9 +36,6 @@ import { LoginModule } from './login/login.module';
     FormsModule,
     HttpClientModule,
     LoginModule
-
-
-
   ],
   providers: [],
   bootstrap: [AppComponent]
