@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class HttpService {
+  // baseUrl:string="https://fancy-pond-flavor.glitch.me";
   baseUrl:string="http://localhost:3000/";
 
   httpHeaders:HttpHeaders = new HttpHeaders()

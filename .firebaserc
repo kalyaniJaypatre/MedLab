@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "medlab-users": {
+      "hosting": {
+        "MedLab": [
+          "medlab-users"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "medlab-users"
+  }
+}
