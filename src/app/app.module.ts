@@ -15,6 +15,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { ViewProductDetailsComponent } from './components/view-product-details/view-product-details.component';
 import { LoginModule } from './login/login.module';
+import { ComponentsfooterComponent } from './shared/componentsfooter/componentsfooter.component';
+import { ViewProductDetailsCategoryComponent } from './components/view-product-details-category/view-product-details-category.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { LoginModule } from './login/login.module';
     MedicineHomeComponent,
     TopDealComponent,
     ViewProductDetailsComponent,
+    ComponentsfooterComponent,
+    ViewProductDetailsCategoryComponent,
     
   ],
   imports: [

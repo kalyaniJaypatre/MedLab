@@ -12,8 +12,8 @@ export class MedicineHomeComponent implements OnInit {
   isPinCodeAvailable:boolean=false;
   pincodeDetails:any;
 
-  @ViewChild('closebtn', { read: ElementRef })
-  closebtn!: ElementRef;
+  @ViewChild('closeBtn', { read: ElementRef })
+  closeBtn!: ElementRef;
   constructor(private http:HttpService) { }
 
   ngOnInit(): void {
@@ -30,8 +30,8 @@ export class MedicineHomeComponent implements OnInit {
         this.isPinCodeAvailable=true;
 
         this.pincodeDetails=response[0];
-        if(this.closebtn){
-          this.closebtn.nativeElement.click();
+        if(this.closeBtn){
+          this.closeBtn.nativeElement.click();
         }
       }else{
           this.isPinCodeAvailable=false;
