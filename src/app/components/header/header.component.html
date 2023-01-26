@@ -4,14 +4,16 @@
      <a href="" class="navbar-brand">Medlab</a>
   </div>
   <div class="col-md-6 text-end">
-    <a href="" class="navbar-brand"><i class="bi bi-cart2 me-2 fs-2 rounded-circle"></i> <span>2</span> Cart</a>
-     <a href="" class="navbar-brand">About Us</a>
-     <a  class="navbar-brand ms-4" *ngIf="!isLoginSuccess" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
-     <a  class="navbar-brand ms-4" *ngIf="isLoginSuccess">{{loggedUserDetails?.userName}}</a>
+    <a  class="navbar-brand cursor" (click)="redirectToCart()"><i class="bi bi-cart2 me-2 fs-2 rounded-circle"></i> <span class="cartCount">{{cardCount | async}} &nbsp;</span> Cart</a>&nbsp;
+     <a  class="navbar-brand"> &nbsp;About Us</a>&nbsp;
+     <a  class="navbar-brand ms-4 cursor" *ngIf="!isLoginSuccess" data-bs-toggle="modal" #loginBtn data-bs-target="#loginModal">Login</a>
+     <a  class="navbar-brand ms-4 cursor"  *ngIf="isLoginSuccess">{{loggedUserDetails?.userName}}</a>&nbsp;
+     <!-- <a  class="navbar-brand ms-4 cursor" data-bs-toggle="modal" data-bs-target="#loginModal" cursor>Login</a> -->
+     <a  class="navbar-brand ms-4" >Logout</a>
   </div>
 </div>
   
-   <!-- Modal -->
+   <!-- Modal
    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
      <div class="modal-dialog">
        <div class="modal-content">
@@ -29,7 +31,37 @@
         </div>
        </div>
      </div>
-   </div>
+   </div> -->
+
+<!-- +====================my model now start================================= -->
+
+<!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">{{actionName}}&nbsp;Form</h5>
+        <button type="button" class="btn-close " cursor data-bs-dismiss="modal" aria-label="Close" #colseBtn></button>
+      </div>
+      <div class="modal-body">
+        <app-sign-up *ngIf="actionName =='SignUp'"></app-sign-up>
+        <app-login *ngIf="actionName == 'SignIn'"  (signInSuccess)="handleLoginSuccess($event)" ></app-login>
+      </div>
+      <div class="d-grid gap-2">
+        <button class="btn btn-primary m-4" type="button" *ngIf="actionName=='SignIn'" (click)="changeAction('SignUp')" >Sign Up</button>
+        <button class="btn btn-primary m-4" type="button" *ngIf="actionName=='SignUp'" (click)="changeAction('SignIn')" >Login</button>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!-- ====================my now model end============== -->
+
+
+
+
+
+
 
    <!--  -->
    <!-- Modal

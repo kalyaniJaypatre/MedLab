@@ -10,7 +10,7 @@ import { HttpService } from 'src/app/core/http/http.service';
 })
 export class ViewProductDetailsComponent implements OnInit {
   productDetails:any;
-  constructor(private route:ActivatedRoute, private http:HttpService) { }
+  constructor(private route:ActivatedRoute, private http:HttpService ) { }
 
   ngOnInit(): void {
    

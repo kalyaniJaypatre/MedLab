@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CartComponent } from './cart/cart.component';
 import { HomeComponent } from './components/home/home.component';
 import { MedicineHomeComponent } from './components/medicine-home/medicine-home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
@@ -7,11 +8,12 @@ import { ViewProductDetailsCategoryComponent } from './components/view-product-d
 import { ViewProductDetailsComponent } from './components/view-product-details/view-product-details.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:'/home', pathMatch:'full'},
-  {path:'medicines', component:MedicineHomeComponent},
-  {path:'view-product-details/:drug-code', component:ViewProductDetailsComponent},
+  {path:'home',component:HomeComponent},
+  {path:'medicines',component:MedicineHomeComponent},
+  {path:'view-product-details/:drug-code',component:ViewProductDetailsComponent},
   {path:'view-top-details-by-category',component:ViewProductDetailsCategoryComponent},
-  {path:'home', component:HomeComponent},
+  {path:'cart',component:CartComponent},
+  {path:'',redirectTo:'/home',pathMatch:'full'},
   {path:'**',component:PageNotFoundComponent}
 ];
 

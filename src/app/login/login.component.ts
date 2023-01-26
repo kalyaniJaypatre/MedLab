@@ -9,19 +9,18 @@ import { HttpService } from '../core/http/http.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
- loginForm!:FormGroup;
- isNewUser:boolean = false ;
+  loginForm!:FormGroup;
+ isNewUser:boolean = false; 
  @Output()
  signInSuccess:EventEmitter<boolean> = new EventEmitter(false);
-
   constructor(private fb:FormBuilder,private http:HttpService) { }
 
   ngOnInit(): void {
-    this.createForm();
+    this.createLoginForm();
   }
 
-  createForm(){
-    this.loginForm = this.fb.group({
+  createLoginForm(){
+    this.loginForm=this.fb.group({
       'mobileNo':['',[Validators.required]],
       'password':['',[Validators.required]]
     })
@@ -34,18 +33,17 @@ export class LoginComponent implements OnInit {
 
    this.http.getDetailsFromServer('users',params).subscribe((response:any)=>{
     if(response && response.length > 0){
-        var user = response[0];
-        const token = "FGHgffgg123gjjhg";
-        user['authToken'] = token ; 
+        var user= response[0];
+        const token="ff445hytytvb";
+        user['authToken']=token;
         localStorage.setItem('authToken',token);
         localStorage.setItem('user',JSON.stringify(user));
         this.isNewUser = false;
         this.signInSuccess.emit(true);
+        
     }else {
       this.isNewUser = true ;
     }
    })
-
-  } 
-
+  }
 }
